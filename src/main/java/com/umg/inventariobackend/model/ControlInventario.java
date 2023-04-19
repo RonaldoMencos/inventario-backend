@@ -30,7 +30,6 @@ public class ControlInventario implements Serializable {
     @ToString.Exclude
     private Bodega bodega;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fecha_modificacion")
+    @Column(name = "fecha_modificacion")
     private Date fechaModificacion;
 }

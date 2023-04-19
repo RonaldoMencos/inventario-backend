@@ -21,10 +21,10 @@ public class ProductoController {
         return ResponseEntity.ok(productoService.findAllProductos());
     }
 
-    @GetMapping("/")
-    public ResponseEntity<Producto> getProducto() {
-        return null;
+//    @GetMapping("/")
+//    public ResponseEntity<Producto> getProducto() {
+//        return null;
 //        return ResponseEntity.ok(productoService.findOneProducto());
-    }
+//    }
 
 }
