@@ -1,9 +1,7 @@
 package com.umg.inventariobackend.service;
 
-import com.umg.inventariobackend.model.Producto;
 import com.umg.inventariobackend.model.ProductoCategoria;
 import com.umg.inventariobackend.repository.ProductoCategoriaRepository;
-import com.umg.inventariobackend.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

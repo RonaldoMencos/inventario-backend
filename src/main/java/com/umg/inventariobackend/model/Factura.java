@@ -1,6 +1,5 @@
 package com.umg.inventariobackend.model;
 
-import ch.qos.logback.core.net.server.Client;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

@@ -1,9 +1,7 @@
 package com.umg.inventariobackend.controller;
 
-import com.umg.inventariobackend.model.Producto;
 import com.umg.inventariobackend.model.ProductoCategoria;
 import com.umg.inventariobackend.service.ProductoCategoriaService;
-import com.umg.inventariobackend.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

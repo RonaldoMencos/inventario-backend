@@ -7,12 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @CrossOrigin("http://127.0.0.1:5173/")
 @RestController
 @RequestMapping("/api/productos")
 public class ProductoController {
-     @Autowired
-     private ProductoService productoService;
+    @Autowired
+    private ProductoService productoService;
 
     @GetMapping("/")
     public List<Producto> getProductos() {
@@ -20,7 +21,7 @@ public class ProductoController {
     }
 
     @GetMapping("/{id}")
-    public Producto getProducto (@PathVariable Long id) {
+    public Producto getProducto(@PathVariable Long id) {
         return productoService.findOneProducto(id);
     }
 
@@ -44,6 +45,14 @@ public class ProductoController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteProducto(@PathVariable Long id) {
-       productoService.deleteProducto(id);
+        productoService.deleteProducto(id);
+    }
+
+    @GetMapping("/byFiltros")
+    public List<Producto> getProductosByFiltros(@RequestParam(required = false, name = "codigo") String codigo,
+                                                @RequestParam(required = false, name = "nombre") String nombre,
+                                                @RequestParam(required = false, name = "descripcion") String descripcion,
+                                                @RequestParam(required = false, name = "categoria") Long categoria) {
+        return productoService.findProductosByFiltros(codigo, nombre, descripcion, categoria);
     }
 }
